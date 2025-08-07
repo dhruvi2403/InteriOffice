@@ -1,0 +1,123 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    background: #fff;
+    padding: 2rem;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Brand Section */
+.brand {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.brand-tagline {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #444;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Error Messages */
+.error {
+    font-size: 0.8rem;
+    color: red;
+    display: none;
+}
+
+/* Buttons */
+button {
+    background: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Switch Forms */
+.switch-form {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.switch-form a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch-form a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+    }
+}

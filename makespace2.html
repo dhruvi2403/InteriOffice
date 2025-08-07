@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeSpace</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="makespace2.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+
+    <div class="container">
+        <h1>InteriOffice - Corporate Space Planning</h1>
+
+        <!-- Office, Conference & Reception furniture Section -->
+        <div class="furniture-section">
+            <div class="section-header">
+                <h2>Office, Conference & Reception furniture</h2>
+                <button class="toggle-btn">✕</button>
+            </div>
+            <table class="furniture-table">
+                <thead>
+                    <tr>
+                        <th>Quantity</th>
+                        <th></th>
+                        <th>Category</th>
+                        <th>Economy </th>
+                        <th>Mid-Range </th>
+                        <th>High-End </th>
+                    </tr>
+                </thead>
+                <tbody id="officeFurnitureBody">
+                    <tr>
+                        <td><input type="number" min="0" class="quantity-input" data-row="executive" value="0"></td>
+                        <td>Executive Office (14'x20')</td>
+                        <td>280</td>
+                        <td class="economy-cost" data-base="5000">0</td>
+                        <td class="midrange-cost" data-base="8500">0</td>
+                        <td class="highend-cost" data-base="15000">0</td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" min="0" class="quantity-input" data-row="small" value="0"></td>
+                        <td>Small Office (9'x9')</td>
+                        <td>81</td>
+                        <td class="economy-cost" data-base="2200">0</td>
+                        <td class="midrange-cost" data-base="3800">0</td>
+                        <td class="highend-cost" data-base="6500">0</td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" min="0" class="quantity-input" data-row="large" value="0"></td>
+                        <td>Large Office (11'x16')</td>
+                        <td>176</td>
+                        <td class="economy-cost" data-base="3500">0</td>
+                        <td class="midrange-cost" data-base="6000">0</td>
+                        <td class="highend-cost" data-base="10500">0</td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" min="0" class="quantity-input" data-row="conference" value="0"></td>
+                        <td>Small Conference Room (11'x15')</td>
+                        <td>165</td>
+                        <td class="economy-cost" data-base="4200">0</td>
+                        <td class="midrange-cost" data-base="7500">0</td>
+                        <td class="highend-cost" data-base="12000">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Chairs Section -->
+        <div class="furniture-section">
+            <div class="section-header">
+                <h2>Chairs</h2>
+                <button class="toggle-btn">✕</button>
+            </div>
+            <table class="furniture-table">
+                <thead>
+                    <tr>
+                        <th>Quantity</th>
+                        <th></th>
+                        <th>Category</th>
+                        <th>Economy </th>
+                        <th>Mid-Range </th>
+                        <th>High-End </th>
+                    </tr>
+                </thead>
+                <tbody id="chairsBody">
+                    <tr>
+                        <td><input type="number" min="0" class="quantity-input" data-row="seating" value="0"></td>
+                        <td>Revolving Seating Chairs(2'x2')</td>
+                        <td>9</td>
+                        <td class="economy-cost" data-base="150">0</td>
+                        <td class="midrange-cost" data-base="300">0</td>
+                        <td class="highend-cost" data-base="800">0</td>
+                    </tr>
+                    <tr class="subtotal-row">
+                        <td colspan="3" class="orange-text">Subtotal</td>
+                        <td id="economy-subtotal">0</td>
+                        <td id="midrange-subtotal">0</td>
+                        <td id="highend-subtotal">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="actions">
+            <span class="print" onclick="printQuote()">PRINT</span>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025. All Rights Reserved | Crafted by <span>InteriOffice</span></p>
+        </div>
+    </footer>
+    <script src="navbar.js"></script>
+    <script src="makespace2.js"></script>
+
+</body>
+
+</html>

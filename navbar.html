@@ -1,0 +1,61 @@
+<!-- navbar.html -->
+
+<head>
+    <!-- favicon -->
+<link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logoo.png" alt="Interioffice Logo" width="400" height="100">
+        </div>
+        <button class="menu-toggle" id="openmenu" aria-label="Open Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-menu">
+            <li><button class="close-menu" id="closemenu" aria-label="Close Menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button></li>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="space1.html" class="nav-link">Spaces</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="showcase.html" class="nav-link">Showcase</a></li>
+            <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+            <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            <li><a href="makespace2.html" class="makespace">Make your Space</a></li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    // Navbar toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('openmenu');
+        const closeMenu = document.getElementById('closemenu');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.add('active');
+            });
+        }
+        
+        if (closeMenu) {
+            closeMenu.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+            });
+        }
+        
+        const currentPage = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentPage || 
+                (currentPage === '' && href === 'index.html') ||
+                (currentPage === '/' && href === 'index.html')) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>

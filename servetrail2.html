@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>servetrail2</title>
+    
+    <style>
+        /* 🌙 General Dark Theme Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* 🔷 Header Styling */
+        .header {
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-bottom: 3px solid #ff6600;
+        }
+
+        .header h2 {
+            margin: 0;
+            font-size: 28px;
+            color: #ff6600;
+        }
+
+        /* 📌 Services Section */
+        .services-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        /* 🌟 Service List */
+        .services-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .service-item {
+            background: #1e1e1e;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-left: 5px solid #ff6600;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+
+        /* 🎭 Hover Effect */
+        .service-item:hover {
+            background: #292929;
+            border-left-color: #ffaa00;
+            transform: translateX(10px);
+            box-shadow: 0px 4px 10px rgba(255, 102, 0, 0.5);
+        }
+
+        /* ⬇️ Service Description (Initially Hidden) */
+        .service-desc {
+            display: none;
+            font-size: 14px;
+            font-weight: normal;
+            color: #ccc;
+            margin-top: 8px;
+        }
+
+        /* 🌍 Responsive Design */
+        @media (max-width: 768px) {
+            .services-container {
+                padding: 10px;
+            }
+            .service-item {
+                font-size: 16px;
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 🔷 Header -->
+    <header class="header">
+        <h2>Our Services</h2>
+    </header>
+
+    <!-- 📌 Services Section -->
+    <section class="services-container">
+        <ul class="services-list">
+            <li class="service-item" onmouseover="showDetails(0)" onmouseout="hideDetails(0)">
+                 Office Space Planning & Layout Design
+                <p class="service-desc">Customized floor plans and space optimization strategies to create efficient workspaces.</p>
+            </li>
+            <li class="service-item" onmouseover="showDetails(1)" onmouseout="hideDetails(1)">
+                 Interior Design & Aesthetic Consultation
+                <p class="service-desc">Expert guidance on color schemes, furniture selection, and decor to reflect your brand identity.</p>
+            </li>
+            <li class="service-item" onmouseover="showDetails(2)" onmouseout="hideDetails(2)">
+                 Modular Office Setup & Furnishing
+                <p class="service-desc">End-to-end solutions for setting up modular workstations, cabins, and conference rooms.</p>
+            </li>
+            <li class="service-item" onmouseover="showDetails(3)" onmouseout="hideDetails(3)">
+                 Lighting & Ambience Enhancement
+                <p class="service-desc">Smart lighting solutions to improve productivity and create the perfect office atmosphere.</p>
+            </li>
+            <li class="service-item" onmouseover="showDetails(4)" onmouseout="hideDetails(4)">
+                 Coworking Space & Shared Office Setup
+                <p class="service-desc">Innovative designs for coworking spaces that encourage collaboration and flexibility.</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 🎭 JavaScript for Hover Effect -->
+    <script>
+        function showDetails(index) {
+            document.querySelectorAll(".service-desc")[index].style.display = "block";
+        }
+
+        function hideDetails(index) {
+            document.querySelectorAll(".service-desc")[index].style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

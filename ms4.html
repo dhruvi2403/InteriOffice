@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InteriOffice - Corporate Space Planning</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .furniture-section {
+            margin-bottom: 30px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background-color: #444;
+            color: white;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .section-header h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+        
+        .toggle-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .furniture-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .furniture-table th, .furniture-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .furniture-table th {
+            background-color: #7a7a7a;
+            color: white;
+        }
+        
+        .furniture-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .quantity-input {
+            width: 70px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .orange-text {
+            color: #ff7b00;
+        }
+        
+        .subtotal-row {
+            background-color: #f9f9f9;
+            font-weight: bold;
+        }
+        
+        .actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>InteriOffice - Corporate Space Planning</h1>
+        
+        <!-- Office, Conference & Reception Furniture Section -->
+        <div class="furniture-section">
+            <div class="section-header">
+                <h2>Office, Conference & Reception furniture</h2>
+                <button class="toggle-btn">✕</button>
+            </div>
+            <table class="furniture-table">
+                <thead>
+                    <tr>
+                        <th>Quantity</th>
+                        <th>Category</th>
+                        <th>Min Sq Ft</th>
+                        <th>Economy</th>
+                        <th>Mid-Range</th>
+                        <th>High-End</th>
+                    </tr>
+                </thead>
+                <tbody id="officeFurnitureBody">
+                    <tr>
+                        <td><input type="number" min="0" class="quantity-input" data-base="5000"></td>
+                        <td>Executive Office (14'x20')</td>
+                        <td>280</td>
+                        <td class="economy-cost">0</td>
+                        <td class="midrange-cost">0</td>
+                        <td class="highend-cost">0</td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" min="0" class="quantity-input" data-base="3500"></td>
+                        <td>Large Office (11'x16')</td>
+                        <td>176</td>
+                        <td class="economy-cost">0</td>
+                        <td class="midrange-cost">0</td>
+                        <td class="highend-cost">0</td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" min="0" class="quantity-input" data-base="4200"></td>
+                        <td>Conference Room (11'x15')</td>
+                        <td>165</td>
+                        <td class="economy-cost">0</td>
+                        <td class="midrange-cost">0</td>
+                        <td class="highend-cost">0</td>
+                    </tr>
+                    <tr class="subtotal-row">
+                        <td colspan="3" class="orange-text">Subtotal</td>
+                        <td id="economy-subtotal">0</td>
+                        <td id="midrange-subtotal">0</td>
+                        <td id="highend-subtotal">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- ///////// -->
+         <!-- Chairs Section -->
+        <div class="furniture-section">
+            <div class="section-header">
+                <h2>Chairs</h2>
+                <button class="toggle-btn">✕</button>
+            </div>
+            <table class="furniture-table">
+                <thead>
+                    <tr>
+                        <th>Quantity</th>
+                        <th></th>
+                        <th>Category</th>
+                        <th>Min Sq Ft</th>
+                        <th>Economy <span class="orange-text">▼</span></th>
+                        <th>Mid-Range <span class="orange-text">▼</span></th>
+                        <th>High-End <span class="orange-text">▼</span></th>
+                    </tr>
+                </thead>
+                <tbody id="chairsBody">
+                    <tr>
+                        <td><input type="number" min="0" class="quantity-input" data-row="seating" value="0"></td>
+                        <td><img src="https://via.placeholder.com/60x45/888/fff?text=Chair" alt="Chair"></td>
+                        <td>Seating</td>
+                        <td>9</td>
+                        <td class="economy-cost" data-base="150">0</td>
+                        <td class="midrange-cost" data-base="300">0</td>
+                        <td class="highend-cost" data-base="800">0</td>
+                    </tr>
+                    <tr class="subtotal-row">
+                        <td colspan="4" class="orange-text">Subtotal</td>
+                        <td id="economy-subtotal">0</td>
+                        <td id="midrange-subtotal">0</td>
+                        <td id="highend-subtotal">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="actions">
+            <button class="btn btn-primary" onclick="printQuote()">PRINT</button>
+        </div>
+    </div>
+    
+    <script>
+        function updateCosts() {
+            let economyTotal = 0;
+            let midrangeTotal = 0;
+            let highendTotal = 0;
+            
+            document.querySelectorAll('.quantity-input').forEach(input => {
+                const quantity = parseInt(input.value) || 0;
+                const baseCost = parseFloat(input.getAttribute('data-base'));
+                
+                const economyCost = quantity * baseCost;
+                const midrangeCost = quantity * (baseCost * 1.7);
+                const highendCost = quantity * (baseCost * 3);
+                
+                const row = input.closest('tr');
+                row.querySelector('.economy-cost').textContent = economyCost;
+                row.querySelector('.midrange-cost').textContent = midrangeCost;
+                row.querySelector('.highend-cost').textContent = highendCost;
+                
+                economyTotal += economyCost;
+                midrangeTotal += midrangeCost;
+                highendTotal += highendCost;
+            });
+            
+            document.getElementById('economy-subtotal').textContent = economyTotal;
+            document.getElementById('midrange-subtotal').textContent = midrangeTotal;
+            document.getElementById('highend-subtotal').textContent = highendTotal;
+        }
+        
+        document.querySelectorAll('.quantity-input').forEach(input => {
+            input.addEventListener('input', updateCosts);
+        });
+        
+        function printQuote() {
+            window.print();
+        }
+    </script>
+</body>
+</html>

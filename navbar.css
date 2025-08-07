@@ -1,0 +1,121 @@
+/* NAVBAR STYLING */
+*{
+    font-family: 'Georgia', serif!important;
+}
+header {
+    width: 100%;
+    background-color: #222; /* Dark background for a modern look */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+nav ul{
+    list-style-type: none;
+}
+/* FLEX CONTAINER */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+/* LOGO */
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+/* NAVIGATION MENU */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* NAVIGATION LINKS */
+.nav-link {
+    position: relative;
+    font-weight: 500;
+    color: white;  /* White text */
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+    padding: 8px 12px;
+}
+
+/* HOVER EFFECT */
+.nav-link:hover {
+    color: #ffcc00; /* Golden yellow accent */
+}
+
+/* UNDERLINE EFFECT */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ffcc00; /* Golden yellow */
+    transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* PRIMARY BUTTON (Send Request) */
+.makespace {
+    background-color: #ffcc00; /* Golden yellow */
+    color: #222;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+}
+
+.makespace:hover {
+    background-color: #e6b800;
+}
+/* HIDE MENU & BUTTONS ON LARGE SCREENS */
+.menu-toggle, .close-menu {
+    display: none;
+}
+
+/* MOBILE MENU */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;  /* Hide menu by default */
+        width: 70%;
+        height: 100vh;
+        background-color: #222;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 80px 40px;
+        transition: 0.4s;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+        z-index: 1100;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .menu-toggle, .close-menu {
+        display: block;
+        color: white;
+        font-size: 1.8rem;
+    }
+
+    .close-menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}

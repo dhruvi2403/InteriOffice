@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interioffice</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- splide css -->
+    <link rel="stylesheet" href="">
+    <!-- remix icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="navbar.css">
+</head>
+
+<body>
+
+    <div id="navbar-container"></div>
+
+    <script>
+       fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+
+                // Reinitialize event listeners after navbar loads
+                document.getElementById('openmenu').addEventListener('click', function() {
+                    document.querySelector('.nav-menu').classList.add('active');
+                });
+
+                document.getElementById('closemenu').addEventListener('click', function() {
+                    document.querySelector('.nav-menu').classList.remove('active');
+                });
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+    
+
+    <div class="hero_wrapper section">
+        <div class="hero_title section_title">
+            <div class="hero_heading">
+                <h1>Design your dream space with us</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.ipsum dolor sit amet consectetur adipisicing
+                    elit.</p>
+
+            </div>
+            <button class="btn1">
+                Discover Now
+            </button>
+        </div>
+    </div>
+
+    <!-- about -->
+    <div class="about section">
+        <div class="about_page section_page after_effect ">
+            <img src="images/about_img_02.png" alt="">
+        </div>
+        <div class="fabout_title section_title">
+            <h2>About Us</h2>
+            <h1>We Provide You Best Experience</h1>
+            <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sed optio tempore animi assumenda
+                et esse. A, itaque neque. Delectus ipsa quas numquam, ratione totam in. Hic cupiditate alias officiis
+                voluptatibus maiores animi! Aliquam, neque.</p>
+            <div class="about_wrap">
+                <p>Cras aliquet scelerisque dui, dapibus condimentum lacus pulvinar quis. Quisque ullamcorper placerat
+                </p>
+                <p>Nulla et leo lacus. Nulla facilisi. Integer nunc orci, porttitor eu urna non, porta faucibus dolor.
+                </p>
+            </div>
+            <div class="manager">
+                <button class="btn1">Learn More</button>
+                <!-- <img src="images/user-about.png" alt="" id="signature"> -->
+                <!-- K2infocom -->
+            </div>
+        </div>
+
+    </div>
+    <!-- <div class="services" section*>
+        <div class="service_title section_title">
+            <h2>Our Services</h2>
+            <h1>What We're Providings</h1>
+        </div>
+        <div class="services_wrap">
+            <div class="services_box">
+                
+                <div class="service_box_page">
+                    <img src="images/se-icon1.png" alt="">
+                </div>
+                <div class="services_box_title">
+                    <h5>Residential Design</h5>
+                    <p>Vivamus lorem nibh, viverra et semper vel, auctor vitae elementum</p>
+
+                </div>
+            </div>
+            <div class="services_box">
+                
+                <div class="service_box_page">
+                    <img src="images/se-icon2.png" alt="">
+                </div>
+                <div class="services_box_title">
+                    <h5>Residential Design</h5>
+                    <p>Vivamus lorem nibh, viverra et semper vel, auctor vitae elementum</p>
+
+                </div>
+            </div>
+            <div class="services_box">
+                
+                <div class="service_box_page">
+                    <img src="images/se-icon3.png" alt="">
+                </div>
+                <div class="services_box_title">
+                    <h5>Residential Design</h5>
+                    <p>Vivamus lorem nibh, viverra et semper vel, auctor vitae elementum</p>
+
+                </div>
+            </div>
+            <div class="services_box">
+                
+                <div class="service_box_page">
+                    <img src="images/se-icon4.png" alt="">
+                </div>
+                <div class="services_box_title">
+                    <h5>Residential Design</h5>
+                    <p>Vivamus lorem nibh, viverra et semper vel, auctor vitae elementum</p>
+
+                </div>
+            </div>
+            <div class="services_box">
+                
+                <div class="service_box_page">
+                    <img src="images/se-icon5.png" alt="">
+                </div>
+                <div class="services_box_title">
+                    <h5>Residential Design</h5>
+                    <p>Vivamus lorem nibh, viverra et semper vel, auctor vitae elementum</p>
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="container2">
+        
+            <h2 class="section-title">LUXURIOUS OFFICE INTERIORS</h2>
+            <div class="divider"></div>
+            <h1 class="main-heading">We Offer Top Notch</h1>
+            <p class="intro-text">
+                Elevate your workspace with our luxurious office interiors, where sophistication meets functionality. 
+                Crafted with premium materials, sleek finishes, and tailored designs, each space exudes elegance and professionalism.
+            </p>
+    
+        <section class="interior-gallery">
+            <div class="interior-card">
+                <div class="decorative-border"></div>
+                <img src="images/meetingroom.jpg" alt="Meeting Room">
+                <h3>Meeting Room</h3>
+                <br>
+                <button>VIEW SPACE</button>
+            </div>
+    
+    
+            <div class="interior-card">
+                <div class="decorative-border"></div>
+                <img src="images/managerchair.jpg" alt="Manager Desk">
+                <h3>Manager Desk</h3>
+                <br>
+                <h2>VIEW SPACE</h2>
+
+            </div>
+
+            <div class="interior-card">
+                <div class="decorative-border"></div>
+                <img src="images/appatizers.jpg" alt="Luxury Office">
+                <h3>Luxury Office</h3>
+                <br>
+                <h2>VIEW SPACE</h2>
+
+            </div>
+        </section>
+    
+        <!--  -->
+        <div class="container faq-container">
+            <h1 class="page-title">Frequently Asked Questions</h1>
+            
+            <div class="accordion" id="faqAccordion">
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            What types of spaces can I book?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>We offer a variety of spaces to meet your needs:</p>
+                            <ul>
+                                <li>Conference rooms (small, medium, and large)</li>
+                                <li>Private offices</li>
+                                <li>Event spaces</li>
+                                <li>Coworking desks</li>
+                                <li>Photography studios</li>
+                                <li>Recording studios</li>
+                            </ul>
+                            <p>Each space comes fully equipped with high-speed internet, comfortable furniture, and climate control.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How do I book a space?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Booking a space is simple:</p>
+                            <ol>
+                                <li>Create an account or log in to your existing account</li>
+                                <li>Browse available spaces and select one that meets your needs</li>
+                                <li>Choose your desired date and time</li>
+                                <li>Review space details and amenities</li>
+                                <li>Complete your booking with payment</li>
+                            </ol>
+                            <p>You'll receive an immediate confirmation email with all the details of your booking, including access instructions and contact information.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Can I customize a space for my event?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Yes! We offer several customization options for your event:</p>
+                            <ul>
+                                <li>Flexible seating arrangements (theater, classroom, boardroom, etc.)</li>
+                                <li>Additional equipment rental (projectors, sound systems, cameras)</li>
+                                <li>Catering services from our preferred vendors</li>
+                                <li>Branding opportunities (banners, digital displays, pop-up stands)</li>
+                                <li>Extended hours for setup and teardown</li>
+                            </ul>
+                            <p>For large events or specific requirements, please contact our events team at least 14 days in advance to discuss your needs.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            What is the cancellation policy?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Our cancellation policy is designed to be fair and transparent:</p>
+                            <ul>
+                                <li><strong>7+ days before booking:</strong> Full refund</li>
+                                <li><strong>3-6 days before booking:</strong> 75% refund</li>
+                                <li><strong>24-72 hours before booking:</strong> 50% refund</li>
+                                <li><strong>Less than 24 hours before booking:</strong> No refund</li>
+                            </ul>
+                            <p>For rescheduling, we offer one free change with at least 48 hours' notice. Additional changes or changes with less notice may incur a fee of 15% of the booking value.</p>
+                            <p>Special events and large bookings may have custom cancellation terms specified at the time of booking.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Are there any hidden fees?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>We pride ourselves on transparent pricing. Your booking includes:</p>
+                            <ul>
+                                <li>Space rental for the duration specified</li>
+                                <li>Basic utilities (electricity, water, heating/cooling)</li>
+                                <li>Standard WiFi connection</li>
+                                <li>Basic cleaning services</li>
+                            </ul>
+                            <p>Additional costs that may apply (always clearly displayed before checkout):</p>
+                            <ul>
+                                <li>Premium WiFi upgrade for large groups</li>
+                                <li>Equipment rentals</li>
+                                <li>After-hours access fee</li>
+                                <li>Excessive cleaning fee (if applicable)</li>
+                                <li>Damage deposit (refundable)</li>
+                            </ul>
+                            <p>All applicable taxes will be shown during the checkout process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="upcoming-offices">
+            <div class="container">
+                <h2 class="section-title">Upcoming Offices</h2>
+                
+                <div class="row">
+                    <!-- Office Card 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="office-card">
+                            <span class="date-tag">15/09/2025</span>
+                            <img src="https://images.unsplash.com/photo-1497215842964-222b430dc094" class="office-img" alt="Main Office">
+                            <div class="office-content">
+                                <div class="office-type">MAIN OFFICE</div>
+                                <h3 class="office-title">The Main Office is the Place Which has to be designed to it's best. <br>Address:Science City, Ahmedabad</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Office Card 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="office-card">
+                            <span class="date-tag">08/09/2025</span>
+                            <img src="https://images.unsplash.com/photo-1604328698692-f76ea9498e76" class="office-img" alt="Cabinete">
+                            <div class="office-content">
+                                <div class="office-type">MAIN CABINETE</div>
+                                <h3 class="office-title">Cabinait is the place for best productive work. <br> Address:Alkapuri, Vadodra</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Office Card 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="office-card">
+                            <span class="date-tag">03/09/2025</span>
+                            <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786" class="office-img" alt="Main Centre">
+                            <div class="office-content">
+                                <div class="office-type">MAIN CENTRE</div>
+                                <h3 class="office-title">Main Center is the place for best productive work. <br>Address: Gota, Ahmedabad</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-container">
+                <p>&copy; 2024. All Rights Reserved | Crafted by <span>InteriOffice</span></p>
+            </div>
+        </footer>
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
+
+<!-- 
+ <header>
+        <h2 class="section-title">LUXURIOUS OFFICE INTERIORS</h2>
+        <div class="divider"></div>
+        <h1 class="main-heading">We Offer Top Notch</h1>
+        <p class="intro-text">
+            Elevate your workspace with our luxurious office interiors, where sophistication meets functionality. 
+            Crafted with premium materials, sleek finishes, and tailored designs, each space exudes elegance and professionalism.
+        </p>
+    </header>
+
+    <section class="interior-gallery">
+        <div class="interior-card">
+            <div class="decorative-border"></div>
+            <img src="meeting-room.jpg" alt="Meeting Room">
+            <h3>Meeting Room</h3>
+        </div>
+
+        <div class="interior-card">
+            <div class="decorative-border"></div>
+            <img src="luxury-office.jpg" alt="Luxury Office">
+            <h3>Luxury Office</h3>
+        </div>
+
+        <div class="interior-card">
+            <div class="decorative-border"></div>
+            <img src="manager-desk.jpg" alt="Manager Desk">
+            <h3>Manager Desk</h3>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <span>BLACKBOX</span>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+
+
+
+.section-title {
+    font-size: 1rem;
+    color: var(--primary-gold);
+    letter-spacing: 2px;
+}
+
+.divider {
+    width: 60px;
+    height: 2px;
+    background-color: var(--primary-gold);
+    margin: 10px auto;
+}
+
+.main-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.intro-text {
+    max-width: 700px;
+    margin: 10px auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Interior Gallery */
+.interior-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.interior-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interior-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.interior-card img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.interior-card h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+/* Decorative Border */
+.decorative-border {
+    width: 60px;
+    height: 10px;
+    background: url('decorative-pattern.png') no-repeat center;
+    background-size: contain;
+    margin: 0 auto 10px;
+}
+
+/* Footer */
+footer {
+    margin-top: 3rem;
+    padding: 15px;
+    background: #333;
+    color: var(--text-color);
+}
+
+.footer-container span {
+    font-weight: bold;
+    color: var(--primary-gold);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 2.5rem;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+    }
+
+    .interior-gallery {
+        grid-template-columns: 1fr;
+    }
+} -->

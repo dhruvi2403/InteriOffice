@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Completed Projects - Interioffice</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Section Styling */
+        .completed-projects {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 15px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Project Container - Horizontal Scroll */
+        .projects-container {
+            display: flex;
+            gap: 10px; /* More spacing between images */
+            flex-wrap: nowrap; /* Prevents wrapping, enabling scrolling */
+            overflow-x: auto; /* Enables horizontal scroll */
+            scroll-behavior: smooth;
+            white-space: nowrap;
+            padding-bottom: 10px; /* Avoids scrollbar overlap */
+        }
+
+        /* Custom Scrollbar Styling */
+        .projects-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .projects-container::-webkit-scrollbar-track {
+            background: #ddd;
+            border-radius: 10px;
+        }
+
+        .projects-container::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+
+        .projects-container::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Each Project Item */
+        .project {
+            position: relative;
+            width: 250px; /* Increased size */
+            min-width: 250px; /* Ensures uniform size */
+            overflow: hidden;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Image Styling */
+        .project img {
+            width: 100%;
+            height: 180px; /* Larger image height */
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Hover Overlay Effect */
+        .overlay {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            font-size: 14px;
+            text-align: center;
+            transition: bottom 0.3s ease-in-out;
+        }
+
+        /* Hover Effect */
+        .project:hover .overlay {
+            bottom: 0;
+        }
+
+        .project:hover img {
+            transform: scale(1.05);
+        }
+        /* /////// */
+        /* Team Section */
+.team-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Team Container */
+.team-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Team Row (Each Team Member) */
+.team-row {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Profile Image */
+.team-row img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+/* Team Info */
+.team-info {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.team-info h3 {
+    margin: 0;
+    color: #222;
+}
+
+.team-info p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Hover Effect */
+.team-row:hover {
+    transform: translateX(10px);
+    background-color: #f4f4f4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-row {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .team-row img {
+        margin: 0 0 10px 0;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <section class="completed-projects">
+        <h2>Our Completed Projects</h2>
+        <div class="projects-container">
+            <div class="project">
+                <img src="images/ergonomic.jpg" alt="Project 1">
+                <div class="overlay">
+                    <p>Modern Workspace - New York</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="images/ergonomic.jpg" alt="Project 2">
+                <div class="overlay">
+                    <p>Corporate Headquarters - London</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="images/ergonomic.jpg" alt="Project 3">
+                <div class="overlay">
+                    <p>Conference Hall - Dubai</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="images/ergonomic.jpg" alt="Project 4">
+                <div class="overlay">
+                    <p>Minimalist Office - Berlin</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="images/ergonomic.jpg" alt="Project 5">
+                <div class="overlay">
+                    <p>Co-working Space - San Francisco</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="images/ergonomic.jpg" alt="Project 6">
+                <div class="overlay">
+                    <p>Luxury Office - Tokyo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-container">
+            
+            <!-- Team Member 1 -->
+            <div class="team-row">
+                <img src="images/appatizers.jpg" alt="John Doe">
+                <div class="team-info">
+                    <h3>John Doe</h3>
+                    <p>🎓 <strong>Degree:</strong> MBA in Interior Design</p>
+                    <p>💼 <strong>Experience:</strong> 10+ Years</p>
+                    <p>🏢 <strong>Role:</strong> Chief Designer</p>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="team-row">
+                <img src="https://source.unsplash.com/150x150/?businesswoman" alt="Jane Smith">
+                <div class="team-info">
+                    <h3>Jane Smith</h3>
+                    <p>🎓 <strong>Degree:</strong> B.Arch in Architecture</p>
+                    <p>💼 <strong>Experience:</strong> 8+ Years</p>
+                    <p>🏢 <strong>Role:</strong> Project Manager</p>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-row">
+                <img src="https://source.unsplash.com/150x150/?architect" alt="Emily Johnson">
+                <div class="team-info">
+                    <h3>Emily Johnson</h3>
+                    <p>🎓 <strong>Degree:</strong> MSc in Interior & Furniture Design</p>
+                    <p>💼 <strong>Experience:</strong> 6+ Years</p>
+                    <p>🏢 <strong>Role:</strong> Lead Interior Designer</p>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="team-row">
+                <img src="https://source.unsplash.com/150x150/?developer" alt="Michael Brown">
+                <div class="team-info">
+                    <h3>Michael Brown</h3>
+                    <p>🎓 <strong>Degree:</strong> BSc in Civil Engineering</p>
+                    <p>💼 <strong>Experience:</strong> 5+ Years</p>
+                    <p>🏢 <strong>Role:</strong> Structural Engineer</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

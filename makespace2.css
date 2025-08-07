@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    font-family:Arial, Helvetica, sans-serif;
+    background-image:
+    linear-gradient(rgba(18, 18, 18, 0.97), rgba(61, 60, 60, 0.97));
+}
+
+.container {
+    max-width: 1200px;
+    margin:9rem auto;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.furniture-section {
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.section-header {
+    background-color: #444;
+    color: white;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.furniture-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.furniture-table th {
+    background-color: #7a7a7a;
+    color: white;
+    text-align: left;
+    padding: 10px;
+}
+
+.furniture-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.furniture-table td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.furniture-table img {
+    width: 60px;
+    height: 45px;
+    object-fit: cover;
+}
+
+.quantity-input {
+    width: 70px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.orange-text {
+    color: #ff7b00;
+}
+
+.subtotal-row {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+.subtotal-row td {
+    border-top: 2px solid #ddd;
+}
+
+.actions {
+    position: absolute;
+    /* /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #d2ac13;
+    /* color: white; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .furniture-table {
+        font-size: 14px;
+    }
+
+    .furniture-table th,
+    .furniture-table td {
+        padding: 8px 5px;
+    }
+
+    .quantity-input {
+        width: 50px;
+        padding: 5px;
+    }
+
+    .furniture-table img {
+        width: 40px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .furniture-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        font-size: 12px;
+        padding: 10px 0;
+    }
+}
+
+/*  */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.footer-container span {
+    font-weight: bold;
+    color: #f4b400;
+}
